@@ -39,7 +39,9 @@ function validateCart(cart) {
 }
 
 function proceedToPayment(orderId) {
-    return new Promise((resolve,reject) => {
+    return new Promise.allSettled((resolve,reject) => {
         resolve("payment success");
     });
 }
+
+
