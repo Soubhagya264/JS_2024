@@ -7,14 +7,25 @@
 //     proceedToPayment(orderId);
 // });
 const cart = ["shoes", "pants", "kurta"];
-const promise = createOrder(cart); // orderId
-promise.then(function () {
-    proceedToPayment(orderId);
-})
-    .catch(function (err) {
-        console.error(err);
+createOrder(cart).
+    then((orderId) => {
+        console.log(`Order created successfully for ${orderId}`);
+        return orderId;
+    }).
+    then((orderId) => {
+        proceedToPayment(orderId).
+            then((paymentMessage) => {
+                console.log(paymentMessage);
+            })
+    }).
+    catch((err) => {
+        console.log(err);
     });
 
+function validateCart(cart) {
+    console.log("validateCart");
+    return true;
+}
 /// Producer
 function createOrder(cart) {
     const pr = new Promise(function (resolve, reject) {
@@ -28,20 +39,26 @@ function createOrder(cart) {
         // logic for createOrder
         const orderId = "12345";
         if (orderId) {
-            resolve(orderId);
+            setTimeout(() => {
+                resolve(orderId);
+            }, 5000);
+
         }
     });
     return pr;
 }
-function validateCart(cart) {
-    console.log("validateCart");
-    return true;
-}
-
 function proceedToPayment(orderId) {
-    return new Promise.allSettled((resolve,reject) => {
-        resolve("payment success");
-    });
+    if (orderId) {
+        return new Promise((resolve, reject) => {
+            resolve(`payment success  for ${orderId}`);
+        });
+    }
+    else {
+        return new Promise((resolve, reject) => {
+            reject(new Error("orderId is not valid"));
+        });
+    }
+
 }
 
 

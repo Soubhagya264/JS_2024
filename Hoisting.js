@@ -1,5 +1,9 @@
 
 
+
+// console.log(l);
+// let l=10;
+
 getName();
 console.log(x);
 

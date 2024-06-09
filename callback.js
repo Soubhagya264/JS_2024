@@ -1,22 +1,17 @@
-// callback function
-
+// // callback function
 console.log("start");
-
 setTimeout(() => {
     console.log("setTimeout");
 }, 5000);
-
 console.log("end");
-
 let startDate = new Date().getTime();
 let endDate = startDate;
-
 
 while (endDate < startDate + 10000) {
     endDate = new Date().getTime();
 }
-
 console.log("While expire");
+
 
 
 

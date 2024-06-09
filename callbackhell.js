@@ -6,6 +6,6 @@ api.createOrder(cart, function () {
                 api.updateWallet()
             }
         )
-        I
+        
     })
 })

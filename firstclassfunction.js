@@ -1,27 +1,33 @@
 // function expresseion
-var b=  function (){
+var b = function () {
   console.log("xyz");
 }
 
 // Named function expresseion
-var k= function xyz(){
+var k = function xyz() {
   console.log("hello");
 };
 
-
+// function statement
+function name() {
+  console.log("Soubhagya");
+}
 
 // first class functions
+// Ability to be used like values 
+var fun = function (param1) {
+  param1()
+}
+fun(()=>{console.log("Soubhagya Nayak ...........")});
 
-function name() {
-    console.log("Soubhagya");
+var b = function (param1, param2) {
+  console.log(param1, param2);
+  return function () {
+    console.log("annonymus function");
+  }
 }
 
-
-
-var fun= function(param1){
-    console.log(param1);
-}
-fun(name);
+b(10,20)();
 
 
 

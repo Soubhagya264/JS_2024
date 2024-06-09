@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.wrapper-stackqueue{
+  display: flex;
+  height: 90vh;
+  justify-content:center;
+}
+.wrapper-container{
+  justify-content:space-evenly;
+}
+.stack-container{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  border:5px solid white;
+  border-top: none;
+  padding-top:5px ;
+  width: 80px;
+  height: 200px;
+  overflow: auto ;
+  overflow-x: hidden;
+  margin-top: 20px !important;
+  margin: auto ;
+
+}
+.queue-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border:5px solid white;
+  border-right: none;
+  padding-top:5px ;
+  width: 270px;
+  height: 100px;
+  overflow: auto ;
+  overflow-x: hidden;
+  margin-top: 20px !important;
+  margin: auto ;
+}
+.queue-container-dequeue{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border:5px solid white;
+  border-left: none;
+  padding-top:5px ;
+  width: 270px;
+  height: 100px;
+  overflow: auto ;
+  overflow-x: hidden;
+  margin-top: 20px !important;
+  margin: auto ;
+}
+.left-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+.pushpop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stack-value{
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.queue-value{
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  font-weight: 600;
+  width: 20%;
+  height: 100%;
+ 
+  border: 1px solid white;
+}
+
+.disabledbutton {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+
+

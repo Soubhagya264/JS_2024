@@ -1,0 +1,1 @@
+data.then((res) => (res.map((i) => console.log(i))))
